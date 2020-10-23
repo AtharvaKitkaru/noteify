@@ -1,0 +1,6 @@
+1) Move RB to separate file 
+2) Style the button 
+3) Fix the register page 
+4) Add forgot password option 
+5) Add register page link   
+6) Create a sample home page  
