@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:noteify/views/ui/auth/forgot_password.dart';
+import 'package:noteify/views/ui/main_app/home.dart';
 import 'package:noteify/views/utils/theme.dart';
 import 'package:noteify/views/ui/auth/login.dart';
 import 'package:noteify/views/ui/auth/register.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => Login(),
         '/register': (context) => Register(),
         '/forgot-password': (context) => ForgotPassword(),
+        '/home':(context) => Home(),
       },
     );
   }

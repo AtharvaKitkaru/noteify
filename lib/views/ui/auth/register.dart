@@ -61,7 +61,7 @@ class Register extends StatelessWidget {
                         isPassword: true),
                   ]),
                 ),
-                AuthButton(value: 'Register', location: '/'),
+                AuthButton(value: 'Register', location: '/home'),
                 Container(
                   height: 50,
                   alignment: Alignment.center,

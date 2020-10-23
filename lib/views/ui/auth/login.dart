@@ -10,7 +10,6 @@ class Login extends StatelessWidget {
     return Scaffold(
         resizeToAvoidBottomPadding: true,
         body: SingleChildScrollView(
-          // padding: EdgeInsets.all(0),
           child: Container(
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(color: Colors.white),
@@ -55,7 +54,7 @@ class Login extends StatelessWidget {
                         placeholder: 'Enter your password', isPassword: true),
                   ]),
                 ),
-                AuthButton(value: 'Login', location: '/register'),
+                AuthButton(value: 'Login', location: '/home'),
                 FlatButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/forgot-password');
