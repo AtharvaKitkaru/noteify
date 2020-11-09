@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:noteify/views/utils/auth_button.dart';
-import 'package:noteify/views/utils/input_field.dart';
+import 'package:noteify/views/utils/reused_widgets/auth_button.dart';
+import 'package:noteify/views/utils/reused_widgets/input_field.dart';
+import 'package:noteify/views/utils/routes/routes.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key key}) : super(key: key);
@@ -12,8 +13,6 @@ class ForgotPassword extends StatelessWidget {
         body: SingleChildScrollView(
           // padding: EdgeInsets.all(0),
           child: Container(
-            height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(color: Colors.white),
             child: Center(
                 child: Column(
               children: <Widget>[
@@ -26,7 +25,6 @@ class ForgotPassword extends StatelessWidget {
                       'NOTEIFY',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colors.black,
                         fontSize: 22,
                         letterSpacing: 1.2,
                         fontWeight: FontWeight.bold,
@@ -66,7 +64,7 @@ class ForgotPassword extends StatelessWidget {
                     children: [
                       FlatButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/');
+                            Navigator.pushNamed(context, Routes.login);
                           },
                           child: Text(
                             'Back to Login',

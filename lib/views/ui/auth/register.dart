@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:noteify/views/utils/auth_button.dart';
-import 'package:noteify/views/utils/input_field.dart';
+import 'package:noteify/views/utils/reused_widgets/auth_button.dart';
+import 'package:noteify/views/utils/reused_widgets/input_field.dart';
+import 'package:noteify/views/utils/routes/routes.dart';
 
 class Register extends StatelessWidget {
   const Register({Key key}) : super(key: key);
@@ -12,8 +13,6 @@ class Register extends StatelessWidget {
         body: SingleChildScrollView(
           // padding: EdgeInsets.all(0),
           child: Container(
-            height: MediaQuery.of(context).size.height,
-            decoration: BoxDecoration(color: Colors.white),
             child: Center(
                 child: Column(
               children: <Widget>[
@@ -26,7 +25,6 @@ class Register extends StatelessWidget {
                       'NOTEIFY',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colors.black,
                         fontSize: 22,
                         letterSpacing: 1.2,
                         fontWeight: FontWeight.bold,
@@ -61,7 +59,7 @@ class Register extends StatelessWidget {
                         isPassword: true),
                   ]),
                 ),
-                AuthButton(value: 'Register', location: '/home'),
+                AuthButton(value: 'Register', location: Routes.home),
                 Container(
                   height: 50,
                   alignment: Alignment.center,
@@ -71,7 +69,7 @@ class Register extends StatelessWidget {
                     children: [
                       FlatButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/');
+                            Navigator.pushNamed(context, Routes.login);
                           },
                           child: Text(
                             'Login',
@@ -81,13 +79,11 @@ class Register extends StatelessWidget {
                               fontSize: 17,
                             ),
                           )),
-                      RaisedButton(
-                          onPressed: null,
-                          child: Container(
-                            child: Image.network(
-                                'https://icons-for-free.com/iconfiles/png/512/g+google+google+2015+new+google+icon-1320190551260288871.png'),
-                            decoration: BoxDecoration(shape: BoxShape.circle),
-                          ))
+                      IconButton(
+                        onPressed: null,
+                        icon: Image.network(
+                            'https://icons-for-free.com/iconfiles/png/512/g+google+google+2015+new+google+icon-1320190551260288871.png'),
+                      )
                     ],
                   ),
                 )

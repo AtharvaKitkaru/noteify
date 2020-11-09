@@ -11,8 +11,7 @@ class InputField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: TextField(
-      autofocus: true,
-      style: TextStyle(color: Colors.black, fontSize: 19),
+      style: TextStyle( fontSize: 19),
       textAlign: TextAlign.center,
       obscureText: this.isPassword ? true : false,
       decoration: InputDecoration(
