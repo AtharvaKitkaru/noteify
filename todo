@@ -1,0 +1,28 @@
+https://support.code42.com/Administrator/6/Configuring/Install_a_CA-signed_SSL_certificate_for_HTTPS_console_access
+
+C:\Users\nisha>keytool -list -v -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore
+Enter keystore password:
+Alias name: androiddebugkey
+Creation date: 28 Aug, 2020
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: C=US, O=Android, CN=Android Debug
+Issuer: C=US, O=Android, CN=Android Debug
+Serial number: 1
+Valid from: Fri Aug 28 10:34:00 IST 2020 until: Sun Aug 21 10:34:00 IST 2050
+Certificate fingerprints:
+         MD5:  08:6D:21:75:67:50:04:D5:72:CA:AF:8D:7C:33:1D:D4
+         SHA1: E6:F7:0F:80:D7:93:BA:A4:8C:A9:D9:37:56:E9:F3:84:74:FF:1E:6D
+         SHA256: 0A:ED:AC:C0:1B:B3:44:41:9B:CB:2F:5D:E5:F8:CE:02:DA:83:A2:5C:96:A8:93:38:3B:CB:32:DD:9F:98:F7:E5
+Signature algorithm name: SHA1withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 1
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore C:\Users\nisha\.android\debug.keystore -destkeystore C:\Users\nisha\.android\debug.keystore -deststoretype pkcs12".
+
+C:\Users\nisha>
+
+
+https://firebase.google.com/docs/android/setup?authuser=8

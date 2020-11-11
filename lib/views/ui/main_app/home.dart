@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'dart:ui' show ImageFilter;
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:noteify/views/utils/reused_widgets/card_home.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -8,13 +10,57 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
+final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _drawerKey,
+      body: Column(children: [
+        Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.only(top: 30),
+          child: Column(children: [
+            Text('NOTEIFY',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22)),
+          ]),
+        ),
+        ButtonBar(alignment: MainAxisAlignment.spaceBetween, children: [
+          IconButton(
+            icon: Icon(Icons.sort),
+            onPressed: null,
+          ),
+          IconButton(
+            icon: FaIcon(FontAwesomeIcons.filter, size: 18),
+            onPressed: null,
+          )
+        ]),
+        // ListView(
+        //   children: [
+        //     // Card(
+        //     //   child: Column(children: [
+        //     //     Text('Heading'),
+        //     //     Text(
+        //     //         'Data ajfldkjalkdfjakldfjalksfjalkdfjalkdfjaklsdfjalkdfjakldfjalksdjfalksdjfladlkjfalkdfjakldfjkasjflkasdjflakdjfaskldfjdlfj')
+        //     //   ]),
+        //     // )
+        //     Text("Hey"),
+        //   ],
+        // ),
+        Expanded(
+          child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(color: Colors.grey[100]),
+              child: SingleChildScrollView(
+                  child: Column(children: [
+                HomeCard(),
+                HomeCard(),
+                HomeCard(),
+                HomeCard(),
+              ]))),
+        ),
+      ]),
       floatingActionButton: Container(
           height: 80,
           child: FittedBox(
@@ -36,7 +82,7 @@ class _HomeState extends State<Home> {
               IconButton(
                 icon: Icon(
                   Icons.menu,
-                  size: 40,
+                  size: 35,
                 ),
                 onPressed: () {
                   _drawerKey.currentState.openDrawer();
@@ -44,7 +90,7 @@ class _HomeState extends State<Home> {
               ),
               Icon(
                 Icons.search,
-                size: 40,
+                size: 35,
               )
             ],
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,6 +99,7 @@ class _HomeState extends State<Home> {
       ),
       drawer: new Drawer(
           child: ListView(
+        // itemExtent: 60,
         children: [
           DrawerHeader(
             child: Column(children: [
@@ -63,11 +110,39 @@ class _HomeState extends State<Home> {
                   fit: BoxFit.cover,
                 ),
               ),
+              Expanded(flex: 1, child: Container()),
               Expanded(
                 flex: 1,
-                child: Text('Name'),
+                child: Text(
+                  'Name',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
               )
             ]),
+          ),
+          ListTile(
+            title: Center(child: Text('Home')),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+          ListTile(
+            title: Center(child: Text('Trash')),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+          ListTile(
+            title: Center(child: Text('Manage Labels')),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+          ListTile(
+            title: Center(child: Text('Logout')),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
           ),
         ],
       )),
