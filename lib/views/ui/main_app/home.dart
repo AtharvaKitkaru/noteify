@@ -18,36 +18,44 @@ class _HomeState extends State<Home> {
     return Scaffold(
       key: _drawerKey,
       body: Column(children: [
+        
+        // HEADER
+
         Container(
-          alignment: Alignment.center,
-          padding: EdgeInsets.only(top: 30),
-          child: Column(children: [
-            Text('NOTEIFY',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22)),
-          ]),
-        ),
-        ButtonBar(alignment: MainAxisAlignment.spaceBetween, children: [
-          IconButton(
-            icon: Icon(Icons.sort),
-            onPressed: null,
+          // decoration: BoxDecoration(boxShadow: BoxShadow(color: Colors.grey)),
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(bottom: 0),
+                alignment: Alignment.center,
+                padding: EdgeInsets.only(top: 30, bottom: 0),
+                child: Column(children: [
+                  Text('NOTEIFY',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22)),
+                ]),
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 3),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        icon: Icon(Icons.sort),
+                        onPressed: null,
+                      ),
+                      IconButton(
+                        icon: FaIcon(FontAwesomeIcons.filter, size: 18),
+                        onPressed: null,
+                      )
+                    ]),
+              ),
+            ],
           ),
-          IconButton(
-            icon: FaIcon(FontAwesomeIcons.filter, size: 18),
-            onPressed: null,
-          )
-        ]),
-        // ListView(
-        //   children: [
-        //     // Card(
-        //     //   child: Column(children: [
-        //     //     Text('Heading'),
-        //     //     Text(
-        //     //         'Data ajfldkjalkdfjakldfjalksfjalkdfjalkdfjaklsdfjalkdfjakldfjalksdjfalksdjfladlkjfalkdfjakldfjkasjflkasdjflakdjfaskldfjdlfj')
-        //     //   ]),
-        //     // )
-        //     Text("Hey"),
-        //   ],
-        // ),
+        ),
+
+        // NOTES LIST
+
         Expanded(
           child: Container(
               width: double.infinity,
@@ -61,8 +69,11 @@ class _HomeState extends State<Home> {
               ]))),
         ),
       ]),
+
+      //FLOATING ACTION BUTTON
+
       floatingActionButton: Container(
-          height: 80,
+          height: 65,
           child: FittedBox(
               child: FloatingActionButton(
             onPressed: null,
@@ -71,18 +82,22 @@ class _HomeState extends State<Home> {
             foregroundColor: Colors.white,
             child: Icon(Icons.add),
           ))),
+
+      // BOTTOM NAV BAR
+
       bottomNavigationBar: BottomAppBar(
+        elevation: 20,
         shape: const CircularNotchedRectangle(),
         color: Color(0xffC7FFEC),
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          height: 75,
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+          height: 60,
           child: Row(
             children: [
               IconButton(
                 icon: Icon(
                   Icons.menu,
-                  size: 35,
+                  size: 30,
                 ),
                 onPressed: () {
                   _drawerKey.currentState.openDrawer();
@@ -90,13 +105,16 @@ class _HomeState extends State<Home> {
               ),
               Icon(
                 Icons.search,
-                size: 35,
+                size: 30,
               )
             ],
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
           ),
         ),
       ),
+
+      //DRAWER
+
       drawer: new Drawer(
           child: ListView(
         // itemExtent: 60,

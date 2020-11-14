@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "960896280791",
+    "firebase_url": "https://noteify-8648d.firebaseio.com",
+    "project_id": "noteify-8648d",
+    "storage_bucket": "noteify-8648d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960896280791:android:3cdda537cb8314ee586892",
+        "android_client_info": {
+          "package_name": "com.na.noteify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960896280791-3o5va1j03mght85837tuntacnc9g7o2f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.na.noteify",
+            "certificate_hash": "e6f70f80d793baa48ca9d93756e9f38474ff1e6d"
+          }
+        },
+        {
+          "client_id": "960896280791-f2k9rot3gd6jcpsflrokknibnrlierlh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNL8irW3yYDZmzHRuQ-0rvjci9sZty1rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960896280791-f2k9rot3gd6jcpsflrokknibnrlierlh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
