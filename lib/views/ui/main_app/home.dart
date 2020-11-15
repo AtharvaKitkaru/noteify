@@ -12,14 +12,13 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
-final GlobalKey<ScaffoldState> drawerKey = GlobalKey();
 
 class _HomeState extends State<Home> {
   bool _searchBar = false;
+  UniqueKey homekey = UniqueKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: drawerKey,
       body: Column(children: [
         // HEADER
 
@@ -144,15 +143,16 @@ class _HomeState extends State<Home> {
           height: 60,
           child: Row(
             children: [
-              IconButton(
-                icon: Icon(
-                  Icons.menu,
-                  size: 30,
-                ),
-                onPressed: () {
-                  drawerKey.currentState.openDrawer();
-                },
-              ),
+              Builder(builder: (BuildContext context) {
+                return IconButton(
+                    icon: Icon(
+                      Icons.menu,
+                      size: 30,
+                    ),
+                    onPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    });
+              }),
               IconButton(
                 icon: Icon(
                   Icons.search,

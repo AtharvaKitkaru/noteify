@@ -45,7 +45,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 currentPage = Routes.home;
               });
               // Navigator.of(context).pop();
-              Navigator.pushNamed(context, Routes.home);
+              Navigator.popAndPushNamed(context, Routes.home);
             },
           ),
           ListTile(
@@ -55,8 +55,7 @@ class _AppDrawerState extends State<AppDrawer> {
               setState(() {
                 currentPage = Routes.trash;
               });
-              Navigator.of(context).pop();
-              Navigator.pushNamed(context, Routes.trash);
+              Navigator.popAndPushNamed(context, Routes.trash);
             },
           ),
           ListTile(
@@ -66,8 +65,7 @@ class _AppDrawerState extends State<AppDrawer> {
               setState(() {
                 currentPage = Routes.manage_labels;
               });
-              Navigator.of(context).pop();
-              Navigator.pushNamed(context, Routes.manage_labels);
+              Navigator.popAndPushNamed(context, Routes.manage_labels);
             },
           ),
           ListTile(

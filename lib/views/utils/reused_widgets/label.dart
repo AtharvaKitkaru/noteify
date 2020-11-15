@@ -9,7 +9,7 @@ class Label extends StatelessWidget {
       margin: EdgeInsets.only(right: 8,left:0,),
       padding: EdgeInsets.symmetric(vertical: 5, horizontal: 7),
       decoration: BoxDecoration(
-          border: Border.all(color: Colors.black, width: 0.2),
+          border: Border.all(color: Colors.black12, width: 1),
           borderRadius: BorderRadius.circular(10)),
       child: Text('Label1',style: TextStyle(fontWeight: FontWeight.w400))
     );
