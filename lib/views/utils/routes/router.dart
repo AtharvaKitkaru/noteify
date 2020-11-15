@@ -3,6 +3,9 @@ import 'package:noteify/views/ui/auth/forgot_password.dart';
 import 'package:noteify/views/ui/auth/login.dart';
 import 'package:noteify/views/ui/auth/register.dart';
 import 'package:noteify/views/ui/main_app/home.dart';
+import 'package:noteify/views/ui/main_app/manage_labels.dart';
+import 'package:noteify/views/ui/main_app/note.dart';
+import 'package:noteify/views/ui/main_app/trash.dart';
 import 'package:noteify/views/utils/routes/routes.dart';
 
 class Router {
@@ -21,6 +24,15 @@ class Router {
 
       case Routes.home:
         return MaterialPageRoute(builder: (context) => Home());
+
+      case Routes.note:
+        return MaterialPageRoute(builder: (context) => Note());
+
+      case Routes.trash:
+        return MaterialPageRoute(builder: (context) => Trash());
+
+      case Routes.manage_labels:
+        return MaterialPageRoute(builder: (context) => ManageLabels());
 
       default:
         return MaterialPageRoute(
