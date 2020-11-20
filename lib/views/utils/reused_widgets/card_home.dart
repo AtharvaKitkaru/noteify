@@ -45,7 +45,7 @@ class _HomeCardState extends State<HomeCard> {
               children: [
                 Text(
                   'Masterpiece by Rick Astley',
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0),
+                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16.0),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 3,
                 ),

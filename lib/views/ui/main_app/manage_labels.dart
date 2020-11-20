@@ -30,6 +30,7 @@ class _ManageLabelsState extends State<ManageLabels> {
       //App Bar
 
       appBar: AppBar(
+        elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
@@ -94,6 +95,7 @@ class _ManageLabelsState extends State<ManageLabels> {
                           // dense: true,
                           title: Text('${labels[index]}'),
                           trailing: PopupMenuButton<Options>(
+                            color: Colors.black54,
                             itemBuilder: (BuildContext context) =>
                                 <PopupMenuEntry<Options>>[
                               const PopupMenuItem<Options>(

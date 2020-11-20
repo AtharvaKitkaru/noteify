@@ -152,8 +152,10 @@ class _HomeState extends State<Home> {
 
         Expanded(
           child: Container(
+              height: double.maxFinite,
+              width: double.maxFinite,
               padding: EdgeInsets.symmetric(vertical: 8),
-              width: double.infinity,
+              // width: double.infinity,
               decoration: BoxDecoration(color: Colors.grey[100]),
               child: SingleChildScrollView(
                   child: Column(children: [
