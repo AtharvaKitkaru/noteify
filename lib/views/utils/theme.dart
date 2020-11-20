@@ -9,7 +9,7 @@ final appTheme = ThemeData(
   accentColor: Colors.cyan[600],
   // Define the default font family.
   // fontFamily: GoogleFonts.getFont('Inter'),
-  fontFamily: 'Inter',
+  fontFamily: 'Georgia',
   // textTheme: GoogleFonts.latoTextTheme(
   //   Theme.of(context).textTheme,
   // ),

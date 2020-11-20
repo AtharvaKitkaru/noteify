@@ -27,7 +27,7 @@ class InputField extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         hintText: '${this.placeholder}',
-        hintStyle: TextStyle(color: Colors.grey[800]),
+        hintStyle: TextStyle(color: Colors.grey[600]),
       ),
     ));
   }

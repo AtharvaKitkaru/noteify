@@ -12,10 +12,47 @@ class Home extends StatefulWidget {
   _HomeState createState() => _HomeState();
 }
 
+enum Labels { label1, label2 }
 
 class _HomeState extends State<Home> {
   bool _searchBar = false;
-  UniqueKey homekey = UniqueKey();
+
+  Future _showFilterModal() async {
+    switch (await showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return SimpleDialog(
+            title: const Text('Select Label'),
+            children: <Widget>[
+              const Divider(
+                color: Colors.black45,
+                height: 5,
+                thickness: 0.2,
+                // indent: 20,
+                endIndent: 0,
+              ),
+              SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, Labels.label1);
+                },
+                child: const Text('Label 1'),
+              ),
+              SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, Labels.label2);
+                },
+                child: const Text('Label 2'),
+              ),
+            ],
+          );
+        })) {
+      case Labels.label1:
+        break;
+      case Labels.label2:
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,31 +76,41 @@ class _HomeState extends State<Home> {
               ),
               _searchBar
                   ? Container(
-                      width: 355,
-                      decoration: BoxDecoration(
-                          color: Colors.grey[100],
-                          borderRadius: BorderRadius.circular(25)),
                       child: TextField(
                           keyboardType: TextInputType.visiblePassword,
                           style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 17,
                               color: Colors.grey[700],
                               decoration: TextDecoration.none),
                           autofocus: true,
                           decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(10),
+                              prefixIcon: IconButton(
+                                icon: Icon(
+                                  Icons.cancel,
+                                  color: Colors.black45,
+                                  size: 20,
+                                ),
+                                onPressed: () {
+                                  setState(() {
+                                    _searchBar = false;
+                                  });
+                                },
+                              ),
+                              filled: true,
+                              fillColor: Colors.grey[100],
+                              contentPadding: EdgeInsets.all(15),
                               border: InputBorder.none,
                               suffixIcon: Icon(
                                 Icons.search,
-                                color: Colors.grey[700],
+                                color: Colors.black45,
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white),
-                                borderRadius: BorderRadius.circular(25),
+                                borderRadius: BorderRadius.circular(20),
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white),
-                                borderRadius: BorderRadius.circular(25),
+                                borderRadius: BorderRadius.circular(20),
                               ),
                               hintText: 'Search...',
                               hintStyle: TextStyle(color: Colors.grey[800]))),
@@ -76,11 +123,6 @@ class _HomeState extends State<Home> {
                             DropDownButton(
                                 hint: "Sort by",
                                 options: ["Name", "Creation Date"]),
-
-                            // IconButton(
-                            //   icon: Icon(Icons.sort),
-                            //   onPressed: null,
-                            // ),
                             Container(
                               margin: EdgeInsets.only(right: 7),
                               // padding: EdgeInsets.only(right: 10),
@@ -88,12 +130,16 @@ class _HomeState extends State<Home> {
                                   color: Colors.grey[100],
                                   borderRadius: BorderRadius.circular(15)),
                               child: IconButton(
-                                // color: Colors.black,
-                                // color: Color(0xff68CDAA),
                                 disabledColor: Color(0xff68CDAA),
                                 focusColor: Color(0xff68CDAA),
-                                icon: FaIcon(FontAwesomeIcons.filter, size: 18),
-                                onPressed: null,
+                                icon: FaIcon(
+                                  FontAwesomeIcons.filter,
+                                  size: 18,
+                                  color: Color(0xff68CDAA),
+                                ),
+                                onPressed: () {
+                                  _showFilterModal();
+                                },
                               ),
                             )
                           ]),
@@ -142,6 +188,7 @@ class _HomeState extends State<Home> {
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
           height: 60,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Builder(builder: (BuildContext context) {
                 return IconButton(
@@ -165,7 +212,6 @@ class _HomeState extends State<Home> {
                 },
               ),
             ],
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
           ),
         ),
       ),
