@@ -1,6 +1,5 @@
 # FlutterNote - Android Note Taking App
 
-![FlutterNote Logo](https://example.com/path/to/logo.png)
 
 FlutterNote is a powerful and user-friendly Android note-taking and management app developed using Flutter and Firebase. It provides a seamless experience for users to create, organize, and manage their notes effortlessly. Whether you need a simple place to jot down quick thoughts or a robust system to categorize and sort your notes, FlutterNote has you covered.
 
