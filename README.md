@@ -1,7 +1,7 @@
-# FlutterNote - Android Note Taking App
+# Noteify - Android Note Taking App
 
 
-FlutterNote is a powerful and user-friendly Android note-taking and management app developed using Flutter and Firebase. It provides a seamless experience for users to create, organize, and manage their notes effortlessly. Whether you need a simple place to jot down quick thoughts or a robust system to categorize and sort your notes, FlutterNote has you covered.
+Noteify is a powerful and user-friendly Android note-taking and management app developed using Flutter and Firebase. It provides a seamless experience for users to create, organize, and manage their notes effortlessly. Whether you need a simple place to jot down quick thoughts or a robust system to categorize and sort your notes, Noteify has you covered.
 
 ## Features
 
@@ -19,18 +19,18 @@ FlutterNote is a powerful and user-friendly Android note-taking and management a
 
 ## Getting Started
 
-Follow these steps to get FlutterNote up and running on your local machine:
+Follow these steps to get Noteify up and running on your local machine:
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/FlutterNote.git
+git clone https://github.com/your-username/Noteify.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd FlutterNote
+cd Noteify
 ```
 
 3. Install dependencies:
@@ -53,10 +53,10 @@ flutter run
 
 ## Contributing
 
-We welcome contributions to make FlutterNote even better. Feel free to submit issues, pull requests, or suggest new features.
+We welcome contributions to make Noteify even better. Feel free to submit issues, pull requests, or suggest new features.
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
-Happy note-taking with FlutterNote! 📝✨
+Happy note-taking with Noteify! 📝✨
