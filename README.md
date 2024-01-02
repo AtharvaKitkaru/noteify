@@ -8,9 +8,16 @@ Noteify is a powerful and user-friendly Android note-taking and management app d
 - **Create Notes:** Write down your thoughts, ideas, or reminders with ease.
 - **Add Images:** Enhance your notes by attaching images to capture the moment.
 - **Label and Categorize:** Organize your notes by adding labels, making it easy to find and manage them.
+- **Filter Notes:** Allows you to filter notes as per labbels.
 - **Sort Notes:** Arrange your notes based on date, title, or any other criteria to suit your workflow.
 - **Move to Trash:** Accidentally deleted a note? No worries, move it to the trash for safekeeping.
 - **Restore Notes:** Retrieve notes from the trash if you decide you need them later.
+
+## Images: 
+![Register Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/733efffb-166b-4c40-b9a6-fda08c3ab23d)  ![Login Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/b14095cd-4cc8-4329-8044-b303d1ecafed)
+
+
+
 
 ## Technologies Used
 
