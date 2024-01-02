@@ -14,7 +14,7 @@ Noteify is a powerful and user-friendly Android note-taking and management app d
 - **Restore Notes:** Retrieve notes from the trash if you decide you need them later.
 
 ## Images: 
-![Register Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/733efffb-166b-4c40-b9a6-fda08c3ab23d)  ![Login Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/b14095cd-4cc8-4329-8044-b303d1ecafed)
+![Register Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/733efffb-166b-4c40-b9a6-fda08c3ab23d) Register  ![Login Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/b14095cd-4cc8-4329-8044-b303d1ecafed) Login
 
 
 
