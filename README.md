@@ -14,10 +14,7 @@ Noteify is a powerful and user-friendly Android note-taking and management app d
 - **Restore Notes:** Retrieve notes from the trash if you decide you need them later.
 
 ## Images: 
-![Register Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/733efffb-166b-4c40-b9a6-fda08c3ab23d) *Register*  ![Login Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/b14095cd-4cc8-4329-8044-b303d1ecafed) *Login*
-
-
-
+![Register Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/733efffb-166b-4c40-b9a6-fda08c3ab23d)   ![Login Page](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/b14095cd-4cc8-4329-8044-b303d1ecafed) ![Reset Password](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/7788dfa2-f185-4b81-aa2c-0ad7ba1b4cc3) ![image](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/940dd1e7-7feb-4fee-a63e-3d6d7338b0f0) ![image](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/af9adc5d-d228-45cd-a8a6-fac1954e36dd) ![image](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/b70a35c9-b352-42a3-bbbd-91aec257c27a) ![image](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/a523d969-cfd7-4670-b4ea-a689f48ace5b) ![image](https://github.com/AtharvaKitkaru/Noteify/assets/54904845/acd8be90-a092-4591-a07f-5ffc7d1044e5)
 
 ## Technologies Used
 
